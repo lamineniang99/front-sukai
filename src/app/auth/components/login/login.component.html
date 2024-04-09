@@ -1,0 +1,17 @@
+<div class="container">
+  <div class="login-container">
+      <h1>Login</h1>
+      <form class="form-login" #signInForm="ngForm">
+          <div class="textfield">
+          <span class="message1"> <strong>{{message}}</strong> </span> <br>
+              <label for="email"> E-mail</label>
+              <input type="email" name="email" ngModel  placeholder="E-mail">
+          </div>
+          <div class="textfield">
+              <label for="senha"> Password</label>
+              <input type="password" name="password" ngModel placeholder="Password">
+          </div>
+          <button type="submit" (click)="onSubmit(signInForm)">Login</button>
+      </form>
+  </div>
+</div>

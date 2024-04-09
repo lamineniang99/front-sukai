@@ -1,0 +1,59 @@
+<div class="content">
+    <div class="sidebar shadow-lg p-3 mb-5 bg-body rounded ">
+      <h5>Localité: {{user.adresse}} </h5>
+      <h6>Temperature : {{user.dms.temperatur}} </h6>
+      <h6>Humidity air : {{user.dms.humidity}} </h6>
+
+    </div>
+    <div class="sdms">
+      <div *ngFor="let sdm of sdms" class="singlesdm shadow-lg bg-body rounded">
+        <p><strong>Position {{sdm.position}} </strong></p>
+        <div *ngFor="let perimetre of sdm.perimetreIds" class="perimetre shadow-sm">
+              <strong>  {{perimetre.position}} &nbsp; &nbsp; &nbsp; &nbsp;
+                  {{perimetre.libelle}}</strong>
+              <div class="btn-content">
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal"
+              (click)="showContains(sdm._id, perimetre._id)">
+                Manual
+              </button>
+              <button disabled type="button" class="btn btn-danger">Automatic</button>
+            </div>
+            <div class="edit">
+            <a type="button"><i class="fa fa-pen"></i></a>
+            </div>
+
+
+        </div>
+      </div>
+    </div>
+</div>
+
+
+
+
+<div class="modal  fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header ">
+        <h5 class="modal-title" id="exampleModalLabel"> {{ modalPerimetre.libelle }} </h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="content1">
+          <div class="modal-sidebar shadow-lg">
+            <h6>Humidity soil : </h6>
+            <h6>Temperature: </h6>
+          </div>
+          <div class="modal-content1 shadow-lg">
+            <h1>Image</h1>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+        <button (click)="onWatering(modalPerimetre)" type="button" class="btn btn-success">Watering...</button>
+      </div>
+    </div>
+  </div>
+</div>
+

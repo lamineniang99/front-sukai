@@ -1,0 +1,87 @@
+.content{
+  display: flex;
+  justify-content: center;
+  height: 87vh;
+  width: 97vw;
+  /* border: 0.1rem solid black; */
+}
+
+.sidebar{
+  height: 100%;
+  width: 20%;
+  /* border: 0.1rem solid black; */
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.sdms {
+  height: 100%;
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+  flex-direction: column;
+}
+
+.singlesdm{
+  width: 95%;
+  height: 17%;
+  /* border: 0.1rem solid black; */
+  gap: 4px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.perimetre{
+  height: 90%;
+  width: 45%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border: 0.1px solid black;
+  background-image: url('https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.techno-science.net%2Fdefinition%2F1317.html&psig=AOvVaw076CnEIfuuV_j4konhb2JI&ust=1712370614240000&source=images&cd=vfe&opi=89978449&ved=0CBIQjRxqFwoTCOjPhuSDqoUDFQAAAAAdAAAAABAE');
+}
+
+.content1{
+  height: 60vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center ;
+}
+.modal-sidebar{
+  height: 100%;
+  width: 20%;
+  /* border: 0.1rem solid black; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  flex-direction: column;
+}
+
+.modal-content1{
+  height: 60vh;
+  width: 80%;
+  border: 0.1rem solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn-content{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.edit{
+  display: flex;
+  justify-content: end;
+}
